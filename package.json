@@ -1,0 +1,60 @@
+{
+  "name": "CREV2",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Factora/creV2"
+  },
+  "scripts": {
+    "test-migration": "node_modules/mocha/bin/mocha migrations/test_migration.js",
+    "coverage": "node_modules/solidity-coverage/bin/exec.js",
+    "truffle-coverage": "node_modules/truffle/build/cli.bundled.js --network coverage",
+    "truffle-unlimited": "node_modules/truffle/build/cli.bundled.js --network localUnlimited",
+    "truffle": "node_modules/truffle/build/cli.bundled.js --network development",
+    "ganache-coverage": "node_modules/solidity-coverage/node_modules/ethereumjs-testrpc-sc/cli.js --gasLimit 0xfffffffffff -s 0 --time '2019-02-15T15:53:00+00:00'",
+    "ganache-unlimited": "node_modules/ganache-cli/cli.js --gasLimit 0xfffffffffff --gasPrice 0x01 -s 0 --time '2019-02-15T15:53:00+00:00' --port 8545 --allowUnlimitedContractSize",
+    "ganache": "node_modules/ganache-cli/cli.js -s 0 --time '2019-02-15T15:53:00' --port 8545",
+    "lint": "standard --verbose './test/*.js' | snazzy && node_modules/solhint/solhint.js contracts/*.sol",
+    "fix": "standard --fix './test/*.js' ",
+    "type": "node_modules/truffle/build/cli.bundled.js compile | node_modules/typechain/dist/cli/cli.js --target truffle ./build/**/*.json"
+  },
+  "devDependencies": {
+    "dotenv": "^6.1.0",
+    "ethereumjs-util": "^5.1.5",
+    "ganache-cli": "6.4.3",
+    "snazzy": "^7.1.1",
+    "solhint": "^1.2.1",
+    "solidity-coverage": "git://github.com/leapdao/solidity-coverage#master",
+    "typechain": "^0.3.11"
+  },
+  "dependencies": {
+    "bignumber.js": "github:frozeman/bignumber.js-nolookahead",
+    "ethereumjs-abi": "^0.6.5",
+    "ethereumjs-testrpc-sc": "^6.1.6",
+    "extend": "^3.0.2",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0",
+    "openzeppelin-solidity": "^v2.2",
+    "simple-mock": "^0.8.0",
+    "solidity-docgen": "^0.2.0-alpha.0",
+    "standard": "^12.0.1",
+    "truffle": "^5.0.15",
+    "truffle-assertions": "^0.8.0",
+    "truffle-privatekey-provider": "^0.1.0",
+    "truffle-typings": "^1.0.6",
+    "web3": "^1.0.0-beta.37"
+  },
+  "resolutions": {
+    "*/**/js-yaml": "3.13.1"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "ignore": [
+      "test/util.js",
+      "test/constants.js"
+    ]
+  }
+}

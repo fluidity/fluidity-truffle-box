@@ -1,0 +1,46 @@
+version: 2.1
+
+orbs:
+  slack: circleci/slack@0.1.1
+
+references:
+
+  container_config: &container_config
+    docker:
+      - image: circleci/node:10
+    working_directory: ~/repo
+
+  smart_contract: &smart_contract
+    <<: *container_config
+    steps:
+      - checkout
+      - run:
+          name: yarn install
+          command: |
+            yarn install
+      - run:
+          name: Migrations Test
+          command: |
+              yarn test-migration
+      - run: 
+          name: Truffle Tests and Coverage
+          command: |
+            yarn ganache-coverage > /dev/null & sleep 10 && yarn coverage
+      - run:
+          name: yarn lint
+          command: yarn lint  
+      - run:
+          name: Clean Up Git
+          command: |
+            sudo apt-get install python-setuptools
+            sudo easy_install git-sweep
+            git-sweep preview
+jobs:
+  smart_contract:
+    <<: *smart_contract
+
+workflows:
+  smart_contract:
+    jobs:
+      - smart_contract:
+          context: Development

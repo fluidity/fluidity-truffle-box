@@ -1,0 +1,16 @@
+{
+    "extends": "default",
+    "rules": {
+        "indent": ["error", 4],
+        "quotes": ["error", "double"],
+        "max-line-length": ["error", 120],
+        "compiler-fixed": false,
+        "two-lines-top-level-separator": false,
+        "avoid-suicide": "error",
+        "avoid-throw": true,
+        "func-order" : false,
+        "not-rely-on-time" : false,
+        "code-complexity": false,
+        "no-simple-event-func-name": false
+    }
+}
