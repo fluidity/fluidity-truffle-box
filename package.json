@@ -1,10 +1,10 @@
 {
-  "name": "CREV2",
+  "name": "fluidity-truffle-box",
   "version": "0.1.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Factora/creV2"
+    "url": "https://github.com/airswap/fluidity-truffle-box"
   },
   "scripts": {
     "test-migration": "node_modules/mocha/bin/mocha migrations/test_migration.js",
