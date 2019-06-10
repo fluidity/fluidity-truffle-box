@@ -9,9 +9,6 @@
     "Test contracts": "truffle test"
   },
   "hooks": {
-    "post-unpack": [
-      "mv .eventual-gitignore .gitignore",
-      "yarn install"
-    ]
+    "post-unpack": "yarn install"
   }
 }
