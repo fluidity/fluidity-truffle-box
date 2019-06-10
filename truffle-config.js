@@ -31,12 +31,6 @@ module.exports = {
       gasPrice: 10000000000,
       gas: 4800000
     }) : undefined,
-    production: {
-      from: '0xe87529a6123a74320e13a6dabf3606630683c029',
-      network_id: '1', // eslint-disable-line camelcase
-      gasPrice: 9000000000,
-      gas: 4003918
-    },
     localUnlimited: {
       host: "localhost",
       network_id: "*",
@@ -54,7 +48,7 @@ module.exports = {
   },
   compilers: {
      solc: {
-       version: "0.5.2",
+       version: "0.5.9",
        optimization: false
      }
   }

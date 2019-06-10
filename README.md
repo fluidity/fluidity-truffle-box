@@ -4,7 +4,7 @@ A truffle box providing us with a more comprehensive setup for our truffle repos
 Included:
 - Circle CI set up
 - Migration Utils
-- Coverage
+- [Solidity Coverage](http://github.com/leapdao/solidity-coverage#master)
 - Solhint
 - Standard ganache
 - Ganache 'unlimited' (unlimited gas and contract size)
