@@ -26,11 +26,11 @@ A circle CI configuration file is provided already in the repository. This file 
 
 ## Migration Utils:
 This tool integrates with truffle migrations to enable a more comprehensive tracking of deployed contracts
-and their addresses. Utilising `migration_utils.js` enables multiple of the same contract to be deployed
-and for these to have different addresses that are both kept track of - which truffle alone does not allow.
+and their addresses. Utilising `migration_utils.js` enables multiple deployed instances of the same contract
+to be tracked easily, which truffle alone does not allow.
 
 ## Solidity Coverage
-We use a [branch of solidity-coverage written by leapdao](http://github.com/leapdao/solidity-coverage#master), which enables us to use the newer versions of solidity.
+We use a [branch of solidity-coverage written by leapdao](http://github.com/leapdao/solidity-coverage#master), which enables us to use the newer versions of solidity (0.5.0+).
 To run coverage locally, you must run the local coverage network using `yarn ganache-coverage`. In a new
 terminal tab then run `yarn coverage` which will run all truffle tests and calculate coverage. To use
 truffle with this local blockchain, use `yarn truffle-coverage ___` filling in the command you want to use.
@@ -69,7 +69,7 @@ the following:
 slither .
 ```
 
-## Mythril
+## Mythril-Classic
 
 If you do not have a Mac, [please see the wiki for ubuntu or docker setup instructions](https://github.com/ConsenSys/mythril-classic/wiki/Installation-and-Setup)
 Prerequisites: for the following instructions to work, you must have:
@@ -93,7 +93,7 @@ From within the root of the directory, run the following commands:
 
 ### Now to actually run mythril...
 
-Mythril depends on importing all of the relevant contract imports before analysing the code. Allowing
+'Mythril-Classic' depends on importing all of the relevant contract imports before analysing the code. Allowing
 these files to be imported actually has to be enabled,and gets more complex when allowing imports from
 node-modules (e.g. Open Zeppelin). For this reason it's easier to run mythril on a truffle build folder,
 which does all the imports for you.
