@@ -1,10 +1,3 @@
-const PrivateKeyProvider = require('truffle-privatekey-provider')
-const dotenv = require('dotenv')
-const path = require('path')
-
-dotenv.config({ path: path.resolve(__dirname, './.env.truffle') })
-const privateKey = process.env.PRIVATE_KEY
-const apiKey = process.env.INFURA_API_KEY
 
 module.exports = {
   networks: {
@@ -13,24 +6,15 @@ module.exports = {
       port: 8545,
       network_id: '*', // Match any network id
       gasPrice: 10000000000,
-      gas: 7000000
+      gas: 4800000
     },
     ganache: {
       host: '127.0.0.1',
       port: 8545,
       network_id: '*', // eslint-disable-line camelcase
       gasPrice: 10000000000,
-      gas: 7000000
-    },
-    rinkeby: privateKey ? ({
-      provider: new PrivateKeyProvider(
-        privateKey,
-        'https://rinkeby.infura.io/' + apiKey
-      ),
-      network_id: '4', // eslint-disable-line camelcase
-      gasPrice: 10000000000,
       gas: 4800000
-    }) : undefined,
+    },
     localUnlimited: {
       host: "localhost",
       network_id: "*",
