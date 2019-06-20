@@ -13,7 +13,6 @@ Included:
 
 
 ## To unbox:
-- Go to the desired location where you would normally run `truffle init`
 - Run `truffle unbox airswap/fluidity-truffle-box`
 
 ## Circle CI:
@@ -21,7 +20,7 @@ A circle CI configuration file is provided already in the repository. This file 
 - `yarn install`
 - test migrations
 - run all tests and calculate their coverage
-- linting (this does not fix linting issues but reports them) 
+- linting (this does not fix linting issues but reports them)
 - clean up old branches in github
 
 ## Migration Utils:
