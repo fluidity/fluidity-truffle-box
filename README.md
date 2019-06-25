@@ -5,6 +5,7 @@ Included:
 - Circle CI set up
 - Migration Utils
 - [Solidity Coverage](http://github.com/leapdao/solidity-coverage#master)
+- [Eth-gas-reporter](https://github.com/cgewecke/eth-gas-reporter)
 - Solhint
 - Standard ganache
 - Ganache 'unlimited' (unlimited gas and contract size)
@@ -21,6 +22,7 @@ A circle CI configuration file is provided already in the repository. This file 
 - test migrations
 - run all tests and calculate their coverage
 - linting (this does not fix linting issues but reports them)
+- eth-gas-reporter report on gas usage on contract deploys and tests
 - clean up old branches in github
 
 ## Migration Utils:
