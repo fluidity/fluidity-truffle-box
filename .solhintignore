@@ -1,1 +1,2 @@
 // Add any files you want solhint to ignore
+contracts/MockContract.sol
