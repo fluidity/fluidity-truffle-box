@@ -22,11 +22,11 @@
   "devDependencies": {
     "dotenv": "^6.1.0",
     "ethereumjs-util": "^5.1.5",
-    "ganache-cli": "6.4.3",
+    "ganache-cli": "6.4.4",
     "snazzy": "^7.1.1",
     "solhint": "^1.2.1",
     "solidity-coverage": "git://github.com/leapdao/solidity-coverage#master",
-    "typechain": "^0.3.11"
+    "typechain": "^0.3.17"
   },
   "dependencies": {
     "bignumber.js": "github:frozeman/bignumber.js-nolookahead",
@@ -36,13 +36,13 @@
     "extend": "^3.0.2",
     "mocha": "^6.0.2",
     "nyc": "^13.3.0",
-    "openzeppelin-solidity": "^v2.2",
+    "openzeppelin-solidity": "^v2.3",
     "simple-mock": "^0.8.0",
     "solidity-docgen": "^0.2.0-alpha.0",
     "standard": "^12.0.1",
-    "truffle": "^5.0.15",
-    "truffle-assertions": "^0.8.0",
-    "truffle-typings": "^1.0.6",
+    "truffle": "^5.0.26",
+    "truffle-assertions": "^0.9.1",
+    "truffle-typings": "^1.0.8",
     "web3": "^1.0.0-beta.37"
   },
   "resolutions": {
