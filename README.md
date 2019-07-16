@@ -31,7 +31,12 @@ and their addresses. Utilising `migration_utils.js` enables multiple deployed in
 to be tracked easily, which truffle alone does not allow.
 
 ## Solidity Coverage
-We use a [branch of solidity-coverage written by leapdao](http://github.com/leapdao/solidity-coverage#master), which enables us to use the newer versions of solidity (0.5.0+).
+We use a [branch of solidity-coverage written by leapdao](http://github.com/leapdao/solidity-coverage#master),
+which enables us to use the newer versions of solidity (0.5.0+).
+
+We have found that solidity-coverage does not work with some versions of node. Our team use node v8.14.0 and
+v8.16.0 at this current moment in time.
+
 To run coverage locally, you must run the local coverage network using `yarn ganache-coverage`. In a new
 terminal tab then run `yarn coverage` which will run all truffle tests and calculate coverage. To use
 truffle with this local blockchain, use `yarn truffle-coverage ___` filling in the command you want to use.
