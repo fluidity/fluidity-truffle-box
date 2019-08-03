@@ -1,5 +1,4 @@
 /* global web3,  */ // ignore those keywords when linting
-const BigNumber = require('bignumber.js')
 
 /*
 * Use of code from https://medium.com/edgefund/time-travelling-truffle-tests-f581c1964687
