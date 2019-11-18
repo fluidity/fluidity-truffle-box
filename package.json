@@ -26,7 +26,10 @@
     "snazzy": "^7.1.1",
     "solhint": "^1.2.1",
     "solidity-coverage": "git://github.com/leapdao/solidity-coverage#master",
-    "typechain": "^0.3.17"
+    "typechain": "^0.3.17",
+    "truffle-flatten": "1.0.6",
+    "truffle-verify": "1.0.4",
+    "@truffle/hdwallet-provider": "^1.0.17"
   },
   "dependencies": {
     "bignumber.js": "github:frozeman/bignumber.js-nolookahead",
