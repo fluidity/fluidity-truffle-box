@@ -1,5 +1,8 @@
+require('dotenv').config()
+const HDWalletProvider = require('@truffle/hdwallet-provider')
 
 module.exports = {
+  // contracts_directory: './flatten',
   networks: {
     development: {
       host: '127.0.0.1',
@@ -29,11 +32,23 @@ module.exports = {
       gas: 0xfffffffffff, // <-- Use this high gas value
       gasPrice: 0x01      // <-- Use this low gas price
     },
+    rinkeby: {
+      provider: () =>
+        new HDWalletProvider(
+          process.env.MNEMONIC,
+          'https://rinkeby.infura.io/v3/' + process.env.INFURA_API_KEY
+        ),
+      network_id: 4,
+    },
   },
   compilers: {
      solc: {
-       version: "0.5.10",
-       optimization: false
+       version: "0.5.13",
+       settings: {
+         optimizer: {
+           enabled: true,
+           runs: 20000,
+         },
      }
   },
   mocha: {
@@ -42,5 +57,9 @@ module.exports = {
       currency: 'USD',
       gasPrice: 21
     }
-  }
+  },
+  plugins: ['truffle-verify', 'truffle-flatten'],
+  api_keys: {
+    etherscan: process.env.ETHERSCAN_API_KEY,
+  },
 }
